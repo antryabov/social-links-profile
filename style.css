@@ -1,0 +1,145 @@
+:root {
+  --green-color: hsl(75, 94%, 57%);
+  --white-color: hsl(0, 0%, 100%);
+
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+
+  --base-font-family: 'Inter', sans-serif;
+  --base-font-size: 0.875rem;
+
+  --border-radius-card: 1.25rem;
+  --border-radius-item: 0.625rem;
+
+  --padding-i-card: clamp(1.85rem, 2vw, 2.5rem);
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  font-weight: 400;
+  color: var(--white-color);
+  background-color: var(--grey-900);
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links {
+  width: clamp(21rem, 50vw, 24rem);
+  height: clamp(36.15rem, 50vw, 38.125rem);
+  padding-inline: var(--padding-i-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey-800);
+  border-radius: var(--border-radius-card);
+
+  .social-links__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.725rem;
+
+    .social-links__img {
+      width: 5.5625rem;
+      height: 5.5625rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .social-links__person-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      font-weight: 600;
+
+      .social-links__person-name {
+        font-size: 1.5rem;
+      }
+
+      .social-links__person-address {
+        padding-inline-start: 0.5rem;
+        color: var(--green-color);
+      }
+    }
+  }
+
+  .social-links__body {
+    width: 100%;
+
+    .social-links__list {
+      padding-block-start: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(1rem, 2vw, 0.825rem);
+      font-weight: 600;
+
+      .social-links__item {
+        width: 100%;
+        height: clamp(2.85rem, 5vw, 3rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--grey-700);
+        border-radius: var(--border-radius-item);
+        cursor: pointer;
+        list-style-type: none;
+      }
+
+      .social-links__item:hover {
+        background-color: var(--green-color);
+        color: var(--grey-900);
+      }
+
+      .social-links__item:focus {
+        background-color: var(--green-color);
+        color: var(--grey-900);
+      }
+    }
+  }
+}
