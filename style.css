@@ -9,10 +9,10 @@
   --base-font-family: 'Inter', sans-serif;
   --base-font-size: 0.875rem;
 
-  --border-radius-card: 1.25rem;
+  --border-radius-card: 0.825rem;
   --border-radius-item: 0.625rem;
 
-  --padding-i-card: clamp(1.85rem, 2vw, 2.5rem);
+  --padding-i-card: clamp(1.85rem, 2vw + 1rem, 2.5rem);
 }
 
 @font-face {
@@ -100,6 +100,7 @@ body {
 
       .social-links__person-name {
         font-size: 1.5rem;
+        font-weight: 700;
       }
 
       .social-links__person-address {
@@ -121,7 +122,7 @@ body {
 
       .social-links__item {
         width: 100%;
-        height: clamp(2.85rem, 5vw, 3rem);
+        height: clamp(2.85rem, 5vw, 2.825rem);
         display: flex;
         justify-content: center;
         align-items: center;
